@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Pacifico&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+:root {
+  --dark: #202e4b;
+  --light: #606b8a;
+}
+
+.icons {
+  position: fixed;
+  left: 5%;
+  bottom: 20%;
+}
+.icons::after {
+  position: absolute;
+  background: var(--dark);
+  content: "";
+  height: 100%;
+  width: 2px;
+  left: 45%;
+  bottom: -100%;
+}
+.icons i {
+  display: block;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: all ease 0.3s;
+}
+
+.icons i:hover {
+  transform: translateY(-20%);
+  cursor: pointer;
+
+  color: var(--light);
+}
+.logo {
+  font-family: "Pacifico", cursive;
+  font-size: 2rem;
+  transform: translateY(-600%);
+}
+.hero {
+  min-height: 100vh;
+}
+.outer-container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+.inner-container {
+  width: 50%;
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  min-height: 10vh;
+}
+
+nav li {
+  display: inline-block;
+  padding: 0 1rem;
+}
+
+.link {
+  color: black;
+  text-decoration: none;
+  display: inline-block;
+  position: relative;
+}
+
+.link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color: grey;
+}
+.nav-animation {
+  transform: translateY(-600%);
+}
+.selected::after {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--dark);
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 90vh;
+  padding-bottom: 10rem;
+}
+.hero-text {
+  width: 80%;
+}
+.hero-animation {
+  overflow: hidden;
+}
+.hero-animation span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+.hero h1 {
+  font-weight: 700;
+  font-size: 6rem;
+  color: var(--dark);
+}
+.hero-h2 {
+  font-size: 5rem;
+  color: #606b8a;
+}
+.hero p {
+  font-size: 1.2rem;
+  width: 60%;
+  margin-top: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  margin-top: 4rem;
+  display: inline-block;
+  background: var(--dark);
+  color: #fff;
+  text-decoration: none;
+}
