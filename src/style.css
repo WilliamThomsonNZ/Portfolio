@@ -55,7 +55,7 @@
   justify-content: space-between;
 }
 .inner-container {
-  width: 50%;
+  width: 1280px;
   margin: 0 auto;
 }
 nav {
@@ -137,4 +137,173 @@ nav li {
   background: var(--dark);
   color: #fff;
   text-decoration: none;
+}
+/* -----------------------------------------------------------Projects-------------------------------------------------------------- */
+#work {
+  min-height: 120vh;
+}
+
+#work h2 {
+  font-weight: normal;
+  font-size: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+#work h2::after {
+  position: absolute;
+  content: "";
+  width: 300%;
+  height: 2px;
+  background-color: var(--dark);
+  left: 110%;
+  top: 50%;
+}
+
+.project-link {
+  display: inline-block;
+  font-weight: normal;
+  font-size: 1rem;
+  margin: 2rem 1rem 4rem 0;
+}
+
+.work-showcase {
+  height: 40vh;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 10rem;
+}
+.work-showcase img {
+  width: 50rem;
+  height: auto;
+  position: absolute;
+  right: 0;
+  border-radius: 5px;
+}
+.text-content {
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  left: 0;
+  top: 20%;
+  text-align: left;
+}
+.description-text {
+  background-color: var(--dark);
+  color: #fff;
+  height: 100%;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  border-radius: 5px;
+  padding: 2rem;
+}
+.description-text h3 {
+  font-weight: normal;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.description-text h3::after {
+  position: absolute;
+  content: "";
+  width: 200%;
+  height: 2px;
+  background-color: var(--light);
+  left: 110%;
+  top: 50%;
+}
+
+.language {
+  display: inline-block;
+  padding: 0 1rem;
+  font-size: 0.8rem;
+}
+.language:nth-child(2),
+.language:nth-child(3) {
+  border-right: 1px solid var(--dark);
+}
+
+.language:nth-child(2) {
+  padding-left: 0;
+}
+.project-display-links {
+  margin-top: 1rem;
+}
+
+.project-display-links a {
+  color: var(--dark);
+  text-decoration: none;
+  margin-right: 2rem;
+  font-size: 1.3rem;
+}
+
+/* -----------------------------about------------------------------- */
+
+#about {
+  min-height: 100vh;
+  margin: 20rem 0;
+  position: relative;
+}
+
+#about img {
+  width: 50%;
+  height: auto;
+  border-radius: 5px;
+}
+
+#about h2 {
+  position: absolute;
+  top: 5%;
+  right: 0;
+  font-size: 2rem;
+  font-weight: normal;
+}
+
+#about h2::after {
+  position: absolute;
+  content: "";
+  width: 300%;
+  height: 2px;
+  background-color: var(--dark);
+  right: 110%;
+  top: 50%;
+}
+.about-me {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  height: 80%;
+  background: #fff;
+  width: 60%;
+  padding-left: 4rem;
+  padding-top: 4rem;
+}
+.about-me {
+  font-size: 1.2rem;
+}
+
+/* ------------------------------------------footer----------------------------- */
+
+footer {
+  min-height: 70vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+footer h2 {
+  font-size: 3rem;
+  font-weight: normal;
+}
+
+footer a @media(max-width: 1500px) {
+  .inner-container {
+    width: 1000px;
+  }
+  html {
+    font-size: 14px;
+  }
 }

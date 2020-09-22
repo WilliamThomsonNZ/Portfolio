@@ -10,6 +10,12 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
     <title>William Thomson</title>
   </head>
   <body>
@@ -53,59 +59,131 @@
         </div>
       </section>
       <section id="work">
-        <h2>Work</h2>
-        <h3>Web Applications</h3>
-        <h3>Websites</h3>
+        <h2>Projects</h2>
+        <br />
+        <h3 class="project-link link selected">Web Applications</h3>
+        <h3 class="project-link link">Websites</h3>
         <div class="work-showcase">
-          <img src="" />
-          <div>
-            <div>
-              <h2 id="title">North Swell</h2>
+          <img src="imgs/easyview.jpg" alt="easyview project" />
+          <div class="text-content">
+            <div class="description-text">
+              <h3 id="title">North Swell</h3>
               <p id="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
                 nobis cumque, ducimus reiciendis similique sed ipsam
-                necessitatibus vel. Nam, odit.
+                necessitatibus vel. Nam, odit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Autem nobis cumque, ducimus
+                reiciendis similique sed ipsam necessitatibus vel. Nam, odit.
               </p>
             </div>
-            React | TailwindCSS | Storm Glass API
-            <a href="#">View code</a>
-            <a href="#">View demo></a>
+            <span class="language">Javascript</span>
+            <span class="language">Chart.JS</span>
+            <span class="language">Github API</span>
+            <div class="project-display-links">
+              <a href="#">
+                <i class="fas fa-code"></i>
+                View code
+              </a>
+              <a href="#">
+                <i class="fas fa-external-link-alt"></i>
+                View demo
+              </a>
+            </div>
           </div>
         </div>
         <div class="work-showcase">
-          <img src="" />
-          <div>
-            <div>
-              <h2 id="title">North Swell</h2>
+          <img src="imgs/northswell.jpg" alt="easyview project" />
+          <div class="text-content">
+            <div class="description-text">
+              <h3 id="title">North Swell</h3>
               <p id="description">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem
                 nobis cumque, ducimus reiciendis similique sed ipsam
-                necessitatibus vel. Nam, odit.
+                necessitatibus vel. Nam, odit. Lorem ipsum dolor sit amet
+                consectetur adipisicing elit. Autem nobis cumque, ducimus
+                reiciendis similique sed ipsam necessitatibus vel. Nam, odit.
               </p>
             </div>
-            React | TailwindCSS | Storm Glass API
-            <a href="#">View code</a>
-            <a href="#">View demo></a>
+            <span class="language">Javascript</span>
+            <span class="language">Chart.JS</span>
+            <span class="language">Github API</span>
+            <div class="project-display-links">
+              <a href="#">
+                <i class="fas fa-code"></i>
+                View code
+              </a>
+              <a href="#">
+                <i class="fas fa-external-link-alt"></i>
+                View demo
+              </a>
+            </div>
           </div>
         </div>
       </section>
       <section id="about">
-        <div>
-          <img src="" alt="" />
-          <h2>About</h2>
-          <div>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda
-              nemo cumque possimus illum veritatis ea officia modi quisquam
-              eius, maxime distinctio autem dolore molestias consequatur sunt
-              saepe voluptatem fuga beatae, esse accusantium sequi officiis
-              alias?
-            </p>
-          </div>
+        <img src="imgs/about.jpg" alt="William Thomson Portrait" />
+        <h2>About</h2>
+        <div class="about-me">
+          <p>
+            Hey! I'm William, a frontend developer based in Auckland New
+            Zealand.
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quisad minim veniam, quis
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam, quisad minim veniam, quis
+          </p>
+          <br />
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore e
+          </p>
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="inner-container">
+      <div>
+        <h2>Let's work together</h2>
+        <a href="#">Email: me@williamthomson.co.nz</a>
+        <a href="#">Phone: +64 211698848</a>
+      </div>
+      <div>
+        <h3>Say hello</h3>
+        <form>
+          <label>
+            NAME*
+            <input type="text" name="name" />
+          </label>
+          <label>
+            SUBJECT*
+            <input type="text" name="subject" />
+          </label>
+          <label>
+            COMPANY
+            <input type="text" name="company" />
+          </label>
+          <label>
+            EMAIL*
+            <input type="text" email="email" />
+          </label>
+          <label>
+            MESSAGE*
+            <input type="text" email="message" />
+          </label>
+        </form>
+      </div>
+    </footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
