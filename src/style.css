@@ -43,22 +43,23 @@
   left: 45%;
   bottom: -100%;
 }
-.icons i {
+.icons a {
   display: block;
   font-size: 2rem;
   margin-bottom: 1rem;
-  transition: all ease 0.3s;
+  transition: all ease 0.5s;
+  color: var(--dark);
 }
 
-.icons i:hover {
+.icons a:hover {
   transform: translateY(-20%);
   cursor: pointer;
-
   color: var(--light);
 }
 .logo {
   font-family: "Pacifico", cursive;
   font-size: 2rem;
+  padding-left: 1rem;
   transform: translateY(-600%);
 }
 
@@ -81,10 +82,10 @@ nav {
   display: flex;
   align-items: center;
   overflow: hidden;
+
+  background: #fff;
 }
-#navBar {
-  border-bottom: "2px solid #202e4b";
-}
+
 nav li {
   display: inline-block;
   padding: 0 1rem;
@@ -152,7 +153,7 @@ nav li {
 
 .btn {
   padding: 1rem 2rem;
-  margin-top: 4rem;
+  margin-top: 2rem;
   display: inline-block;
   background: var(--dark);
   color: #fff;
@@ -186,7 +187,7 @@ nav li {
 
 /* -----------------------------------------------------------Projects-------------------------------------------------------------- */
 #work {
-  min-height: 120vh;
+  /* work out height here */
 }
 
 #work h2 {
@@ -211,10 +212,46 @@ nav li {
   font-weight: normal;
   font-size: 1rem;
   margin: 2rem 1rem 4rem 0;
+  transition: all 0.3s ease-in;
+  background: none;
+  border: none;
 }
 
+.project-link:hover {
+  cursor: pointer;
+}
+
+.project-link::after {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background-color: var(--dark);
+  transition: all 0.3s ease-in-out;
+}
+.project-link:hover::after {
+  width: 100%;
+}
+.selected-project::after {
+  content: "";
+  position: absolute;
+  bottom: -0.8rem;
+  left: 0;
+  height: 3px;
+  width: 2rem;
+  background-color: var(--dark);
+  transition: all 0.3s ease-in;
+}
+
+.selected-project:hover::after {
+  width: 100%;
+  cursor: pointer;
+}
 .work-showcase {
   height: 50vh;
+  max-height: 540px;
   width: 100%;
   overflow: hidden;
   position: relative;
@@ -254,7 +291,7 @@ nav li {
 .description-text h3::after {
   position: absolute;
   content: "";
-  width: 200%;
+  width: 6rem;
   height: 2px;
   background-color: var(--light);
   left: 110%;
@@ -290,7 +327,6 @@ nav li {
 /* -----------------------------about------------------------------- */
 
 #about {
-  min-height: 100vh;
   margin: 20rem 0;
   position: relative;
 }
@@ -335,8 +371,8 @@ nav li {
 /* ------------------------------------------footer----------------------------- */
 
 footer {
-  min-height: 50vh;
   display: grid;
+  padding-bottom: 10rem;
   grid-template-columns: 1fr 1fr;
 }
 
@@ -390,6 +426,11 @@ footer h2 {
 
 .contact-form button:hover {
   cursor: pointer;
+}
+
+.lower-footer h3 {
+  font-weight: normal;
+  margin-top: 4rem;
 }
 /* footer a @media(max-width: 1500px) {
   .inner-container {

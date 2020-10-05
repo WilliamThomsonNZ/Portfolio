@@ -37,9 +37,9 @@
     </header>
     <main class="inner-container">
       <div class="icons">
-        <i class="fab fa-github"></i>
-        <i class="fab fa-linkedin"></i>
-        <i class="fab fa-twitter"></i>
+        <a href="#" tabindex="0"><i class="fab fa-github"></i></a>
+        <a href="#" tabindex="0"><i class="fab fa-linkedin"></i></a>
+        <a href="#" tabindex="0"><i class="fab fa-twitter"></i></a>
       </div>
       <!-- <div class="page-select">
         <a href="#hero"><div id="page1" class="page-option"></div></a>
@@ -73,9 +73,16 @@
       <section id="work">
         <h2>Projects</h2>
         <br />
-        <h3 class="project-link link selected">Web Applications</h3>
-        <h3 class="project-link link">Websites</h3>
-        <div class="work-showcase">
+        <button class="project-link link selected-project" id="webApps">
+          Web Applications
+        </button>
+        <button class="project-link link" tabindex="0" id="websites">
+          Websites
+        </button>
+        <div id="project1"></div>
+        <div id="project2"></div>
+
+        <!-- <div class="work-showcase">
           <img src="imgs/easyview.jpg" alt="easyview project" />
           <div class="text-content">
             <div class="description-text">
@@ -130,7 +137,7 @@
               </div>
             </div>
           </div>
-        </div>
+        </div> -->
       </section>
       <section id="about">
         <img src="imgs/about.jpg" alt="William Thomson Portrait" />
@@ -199,6 +206,9 @@
             <i class="fas fa-long-arrow-alt-right"></i>
           </button>
         </form>
+      </div>
+      <div class="lower-footer">
+        <h3>&copy; William Thomson 2020. All rights reserved</h3>
       </div>
     </footer>
     <script
