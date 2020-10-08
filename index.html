@@ -21,8 +21,8 @@
   <body>
     <header class="outer-container" id="navBar">
       <span class="logo">W</span>
-      <nav id="navBar">
-        <ul>
+      <nav>
+        <ul class="desktopMenu">
           <li><a href="" class="selected link nav-animation">Home</a></li>
           <li><a href="" class="link nav-animation">Projects</a></li>
           <li><a href="" class="link nav-animation">About</a></li>
@@ -34,6 +34,23 @@
           </li>
         </ul>
       </nav>
+      <div class="side-menu" id="side-menu" tabindex="0">
+        <div class="line"></div>
+        <div class="line2"></div>
+      </div>
+      <div class="mobile-menu" id="mobileMenu">
+        <ul>
+          <li><a href="">Home</a></li>
+          <li><a href="">Projects</a></li>
+          <li><a href="">About</a></li>
+          <li><a href="">Contact</a></li>
+          <li>
+            <a href="resume.pdf" class="btn nav-animation" target="_blank">
+              Resume
+            </a>
+          </li>
+        </ul>
+      </div>
     </header>
     <main class="inner-container">
       <div class="icons">
@@ -140,7 +157,6 @@
         </div> -->
       </section>
       <section id="about">
-        <img src="imgs/about.jpg" alt="William Thomson Portrait" />
         <h2>About</h2>
         <div class="about-me">
           <p>
@@ -163,12 +179,8 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quisad minim veniam, quis
           </p>
-          <br />
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore e
-          </p>
         </div>
+        <img src="imgs/about.jpg" alt="William Thomson Portrait" />
       </section>
     </main>
     <footer class="inner-container">
@@ -208,9 +220,12 @@
         </form>
       </div>
       <div class="lower-footer">
-        <h3>&copy; William Thomson 2020. All rights reserved</h3>
+        <a href="#" tabindex="0"><i class="fab fa-github"></i></a>
+        <a href="#" tabindex="0"><i class="fab fa-linkedin"></i></a>
+        <a href="#" tabindex="0"><i class="fab fa-twitter"></i></a>
       </div>
     </footer>
+
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
