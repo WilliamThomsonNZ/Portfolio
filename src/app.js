@@ -32,41 +32,42 @@ const webApps = [
   {
     name: "North Swell",
     description:
-      "Hi my name is william thomson, I am studying to be a front end developer. I am moving to auckland next year to try and find a job",
+      "North swell is an application to save surf spots and have access to the forecast for each surf spot in real time. The motivation for creating this app was to have quick access to the forecast of some of my local surf beaches all in one place. ",
     image: "imgs/northswell3.jpg",
-    languages: ["Javascript", "Chart.JS", "Github API"],
-    gitHubLink: "https://Githubwhaterever",
+    languages: ["React", "TailwindCSS", "Storm Glass API"],
+    gitHubLink: "https://github.com/WilliamThomsonNZ/north-swell",
     demoLink: "https://North-swell.netlify.app",
   },
   {
     name: "EasyView",
     description:
-      "Hi my name is william thomson, I am studying to be a front end developer. I am moving to auckland next year to try and find a job",
+      "Easy View is an application that displays a github profile with a graph showing most used languages. It also allows you to sort repos based on size, forks and stars. The motivation for this application was to build a github profile that looks more like other modern social media platforms.",
     image: "imgs/easyview.jpg",
     languages: ["Javascript", "Chart.JS", "Github API"],
-    gitHubLink: "https://Githubwhaterever",
-    demoLink: "https://North-swell.netlify.app",
+    gitHubLink: "https://github.com/WilliamThomsonNZ/EasyView",
+    demoLink: "https://easyview.netlify.app/",
   },
 ];
 
 const websites = [
   {
-    name: "North Swell website",
+    name: "Mojo Gloves",
     description:
-      "Hi my name is william thomson, I am studying to be a front end developer. I am moving to auckland next year to try and find a job",
-    image: "imgs/northswell3.jpg",
-    languages: ["Javascript", "Chart.JS", "Github API"],
-    gitHubLink: "https://Githubwhaterever",
-    demoLink: "https://North-swell.netlify.app",
+      "Mojo gloves is a teaching aid for those wanting to touch-type. This website is used to promote and allow customers to place an order",
+      
+    image: "imgs/mojo.jpg",
+    languages: ["UI/UX", "AdobeXD", "Development"],
+    gitHubLink: "https://github.com/WilliamThomsonNZ/mojogloves",
+    demoLink: "https://mojogloves.netlify.app/",
   },
   {
-    name: "North Swell weby",
+    name: "Victoria Barendsen Psychology",
     description:
-      "Hi my name is william thomson, I am studying to be a front end developer. I am moving to auckland next year to try and find a job",
-    image: "imgs/northswell3.jpg",
-    languages: ["Javascript", "Chart.JS", "Github API"],
-    gitHubLink: "https://Githubwhaterever",
-    demoLink: "https://North-swell.netlify.app",
+      "Victoria Barendsen recently made the switch to become an independent psychologist. She required an information based website that allowed prospective clients to easily contact her and book appointments.",
+    image: "imgs/vb.jpg",
+    languages: ["UI/UX", "AdobeXD", "Development"],
+    gitHubLink: "https://github.com/WilliamThomsonNZ/VBPsych",
+    demoLink: "https://www.victoriabarendsenpsychology.co.nz",
   },
 ];
 
@@ -79,7 +80,7 @@ const displayProjects = (array) => {
     projectDisplay.innerHTML = "";
     let content = document.createElement("div");
     content.innerHTML = ` <div class="work-showcase">
-  <a href = "${project.demoLink} class = "overlay">
+  
   <img src=${project.image} alt=${project.imgageAlt} />
   </a>
   <div class="text-content">
@@ -92,11 +93,11 @@ const displayProjects = (array) => {
       <span class="language centerLang">${project.languages[1]}</span>
       <span class="language">${project.languages[2]}</span>
       <div class="project-display-links">
-        <a href=${project.gitHubLink}>
+        <a href=${project.gitHubLink} rel = "noopener" target ="_blank">
           <i class="fas fa-code"></i>
           View code
         </a>
-        <a href=${project.demoLink}>
+        <a href=${project.demoLink} rel = "noopener" target = "_blank">
           <i class="fas fa-external-link-alt"></i>
           View demo
         </a>
@@ -109,21 +110,39 @@ const displayProjects = (array) => {
 };
 displayProjects(webApps);
 
+//Changing between projects 
+const projectSection = document.getElementById("projects");
+
+const fade = () =>{
+  projectSection.style.opacity = "0";
+  setTimeout(() => {
+    projectSection.style.opacity = "1";
+  }, 400)
+}
+
 webAppsBtn.addEventListener("click", () => {
+  
   if (websiteBtn.classList.contains("selected-project")) {
+    fade();
     websiteBtn.classList.toggle("selected-project");
     webAppsBtn.classList.toggle("selected-project");
   }
-  tl.to(".work-showcase", { y: "-600%", duration: 0.3, stagger: 0.1 });
-  displayProjects(webApps);
+  setTimeout(()=>{
+    displayProjects(webApps);
+  },300)
+ 
+ 
 });
 websiteBtn.addEventListener("click", () => {
+  
   if (webAppsBtn.classList.contains("selected-project")) {
+    fade();
     websiteBtn.classList.toggle("selected-project");
     webAppsBtn.classList.toggle("selected-project");
   }
-
-  displayProjects(websites);
+  setTimeout(()=>{
+    displayProjects(websites);
+  },300)
 });
 
 //Side Menu
@@ -143,3 +162,27 @@ sideMenu.addEventListener("click", () => {
   menuLine.classList.toggle("white");
   menuLine2.classList.toggle("white");
 });
+
+
+// Contact Forn using Email.js
+document.getElementById("contact-form").addEventListener("submit", (event) => {
+  event.preventDefault();
+  (async () => {
+    const form = document.getElementById("contactBtn");
+    form.innerHTML = "<img src='imgs/loading1.svg'/>";
+    await emailjs.sendForm("WilliamThomson", "williamThomson", "#contact-form");
+    form.innerHTML = "&#10003;";
+    setTimeout(() => {
+      form.innerHTML = " Send <i class='fas fa-long-arrow-alt-right'></i>"
+      ;
+    }, 2500);
+  })()
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+  event.target.reset();
+});
+
