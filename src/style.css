@@ -244,6 +244,9 @@ nav li {
   color: var(--dark);
 }
 
+#viewProjects {
+  opacity: 0;
+}
 #mobile-resume-btn {
   display: inline-block;
   border: 1px solid #fff;

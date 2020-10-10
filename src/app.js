@@ -41,7 +41,7 @@ const webApps = [
   {
     name: "EasyView",
     description:
-      "Easy View is an application that displays a github profile with a graph showing most used languages. It also allows you to sort repos based on size, forks and stars. The motivation for this application was to build a github profile that looks more like other modern social media platforms.",
+      "Easy View is an application that displays a Github profile with a graph showing most used languages. It also allows you to sort repos based on size, forks and stars. The motivation for this application was to build a github profile that looks more like other modern social media platforms.",
     image: "imgs/easyview.jpg",
     languages: ["Javascript", "Chart.JS", "Github API"],
     gitHubLink: "https://github.com/WilliamThomsonNZ/EasyView",
@@ -163,7 +163,16 @@ sideMenu.addEventListener("click", () => {
   menuLine2.classList.toggle("white");
 });
 
-
+mobileMenu.addEventListener("click", (e)=>{
+  if(e.target.nodeName === "A"){
+    mobileMenu.classList.toggle("open");
+    html.classList.toggle("hidden");
+    menuLine.classList.toggle("closeBtn");
+    menuLine2.classList.toggle("closeBtn2");
+    menuLine.classList.toggle("white");
+    menuLine2.classList.toggle("white");
+  }
+})
 // Contact Forn using Email.js
 document.getElementById("contact-form").addEventListener("submit", (event) => {
   event.preventDefault();
