@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="src/style.css" />
-    <link rel="icon" href="imgs/W.png" />
+    <link rel="icon" href="imgs/favicon.png" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
@@ -17,19 +17,19 @@
       integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
       crossorigin="anonymous"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>William Thomson | Front End Developer</title>
   </head>
   <body>
     <header class="outer-container" id="navBar">
-      <span class="logo">W</span>
+      <a href="#hero" class="link nav-animation">WILLIAM THOMSON.</a>
       <nav>
         <ul class="desktopMenu">
-          <li><a href="#hero" class="selected link nav-animation">Home</a></li>
-          <li><a href="#work" class="link nav-animation">Projects</a></li>
+          <li><a href="#work" class="nav-animation link">Projects</a></li>
           <li><a href="#about" class="link nav-animation">About</a></li>
           <li><a href="#contact" class="link nav-animation">Contact</a></li>
           <li>
-            <a href="resume.pdf" class="btn nav-animation" target="_blank">
+            <a href="resume.pdf" class="link nav-animation" target="_blank">
               Resume
             </a>
           </li>
@@ -41,17 +41,11 @@
       </div>
       <div class="mobile-menu" id="mobileMenu">
         <ul>
-          <li><a href="#hero">Home</a></li>
           <li><a href="#work">Projects</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
-            <a
-              href="resume.pdf"
-              class="btn"
-              id="mobile-resume-btn"
-              target="_blank"
-            >
+            <a href="resume.pdf" id="mobile-resume-btn" target="_blank">
               Resume
             </a>
           </li>
@@ -68,7 +62,14 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <!-- <a href="#" tabindex="0"><i class="fab fa-linkedin"></i></a> -->
+        <a
+          href="https://www.linkedin.com/in/william-thomson-31b6681b2/"
+          rel="noopener"
+          tabindex="0"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
         <a
           href="https://twitter.com/WillThomsonnz"
           rel="noopener"
@@ -80,40 +81,227 @@
       </div>
       <section class="hero" id="hero">
         <div class="hero-text">
-          <h2 class="hero-animation">
-            <span class="text">Hey, my name is</span>
-          </h2>
-          <h1 class="hero-animation">
-            <span class="text">William Thomson.</span>
-          </h1>
-          <h2 class="hero-h2 hero-animation">
-            <span class="text">I build things for the web.</span>
-          </h2>
-          <p class="hero-animation">
-            <span class="text">
-              I’m a Front End Developer based in New Zealand, currently focusing
-              on building websites and applications with the popular Javascript
-              library React.
-            </span>
+          <p>
+            Hey! I’m Will, a
+            <span>Front End Developer</span>
+            based in New Zealand. I build modern and user-focused websites and
+            web applications.
+            <a href="#contact" id="hero-link">Get in touch</a>
+            below if you are looking to bring your project to the web.
           </p>
 
-          <a href="#work" class="btn hero-btn" id="viewProjects">
-            <span>View Projects</span>
-          </a>
+          <a href="#featuredWork" id="projects-hero-link">View Projects</a>
         </div>
+        <!-- <div class="spinningContainer">
+          <img src="Untitled-4.png" class="spinning" />
+        </div> -->
+      </section>
+
+      <section id="featuredWork">
+        <div class="featuredGrid">
+          <h3>Erin Fleming Photography</h3>
+          <p>
+            Photography display website for Erin Fleming Photography. The
+            motivation behind this was to create an interactive interface where
+            users can browse photos and get and contact with Erin.
+            <br />
+            <a
+              href="https://efphotography.co.nz"
+              target="_blank"
+              rel="noopener"
+              class="link project-link featured-link"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+            <a
+              href="https://github.com/WilliamThomsonNZ/EFPhoto"
+              target="_blank"
+              rel="noopener"
+              class="link project-link featured-link"
+            >
+              <i class="fas fa-code"></i>
+              View Code
+            </a>
+          </p>
+          <div class="techUsed">
+            <h3>Tech Used</h3>
+            <ul>
+              <li>React</li>
+              <li>Framer Motion</li>
+              <li>GSAP</li>
+            </ul>
+          </div>
+        </div>
+        <div class="phoneGrid">
+          <img src="imgs/mocks/phone1.png" />
+          <img src="imgs/mocks/iphone3.png" />
+          <img src="imgs/mocks/iphone2.png" />
+        </div>
+        <img src="imgs/mocks/homePage.png" class="fullImg" />
       </section>
       <section id="work">
-        <h2>Projects</h2>
-        <br />
-        <button class="project-link link selected-project" id="webApps">
-          Web Applications
-        </button>
-        <button class="project-link link" tabindex="0" id="websites">
-          Websites
-        </button>
-        <div id="projects">
-          <div id="project1"></div>
-          <div id="project2"></div>
+        <h2>A few more projects</h2>
+        <div class="projects-grid">
+          <div class="img-left one">
+            <img
+              src="imgs/mocks/northSwellMockup.png"
+              alt="north swell screen shot"
+            />
+          </div>
+          <div class="text two">
+            <h3 class="project-title">North Swell</h3>
+            <p class="description">
+              North swell is an application to save surf spots and have access
+              to the forecast for each surf spot in real time. The motivation
+              for creating this app was to have quick access to the forecast of
+              some of my local surf beaches all in one place.
+            </p>
+            <div class="techUsedProjects">
+              <h3>Tech Used</h3>
+              <ul>
+                <li>React</li>
+                <li>TailwindCSS</li>
+                <li>StormGlass API</li>
+              </ul>
+            </div>
+            <a
+              href="https://North-swell.netlify.app"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+            <a
+              href="https://github.com/WilliamThomsonNZ/north-swell"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-code"></i>
+              View Code
+            </a>
+          </div>
+          <div class="img-right three">
+            <img
+              src="imgs/mocks/easyViewMockup.png"
+              alt="north swell screen shot"
+            />
+          </div>
+          <div class="text four">
+            <h3 class="project-title">Easy View</h3>
+            <p class="description">
+              Easy View is an application that displays a Github profile with a
+              graph showing most used languages. It also allows you to sort
+              repos based on size, forks and stars.
+            </p>
+            <div class="techUsedProjects">
+              <h3>Tech Used</h3>
+              <ul>
+                <li>Javascript</li>
+                <li>Chart.JS</li>
+                <li>Github Profile API</li>
+              </ul>
+            </div>
+            <a
+              href="https://easyview.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+            <a
+              href="https://github.com/WilliamThomsonNZ/EasyView"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-code"></i>
+              View Code
+            </a>
+          </div>
+
+          <div class="img-left five">
+            <img
+              src="imgs/mocks/mojoMockup.png"
+              alt="north swell screen shot"
+            />
+          </div>
+          <div class="text six">
+            <h3 class="project-title">Mojo Gloves</h3>
+            <p class="description">
+              Mojo gloves is a teaching aid for those wanting to touch-type.
+              This website is used to promote and allow customers to place an
+              order.
+            </p>
+            <div class="techUsedProjects">
+              <h3>Role</h3>
+              <ul>
+                <li>UI/UX (AdobeXD)</li>
+                <li>Development (HTML/CSS/Javascript)</li>
+              </ul>
+            </div>
+            <a
+              href="https://mojogloves.netlify.app/"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+            <a
+              href="https://github.com/WilliamThomsonNZ/mojogloves"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-code"></i>
+              View Code
+            </a>
+          </div>
+          <div class="img-right seven">
+            <img src="imgs/mocks/vBMockUp.png" alt="north swell screen shot" />
+          </div>
+          <div class="text eight">
+            <h3 class="project-title">Victoria Barendsen Psychology</h3>
+            <p class="description">
+              Victoria Barendsen recently made the switch to become an
+              independent psychologist. She required an information based
+              website that allowed prospective clients to easily contact her and
+              book appointments.
+            </p>
+            <div class="techUsedProjects">
+              <h3>Role</h3>
+              <ul>
+                <li>UI/UX (AdobeXD)</li>
+                <li>Development (HTML/CSS/Javascript)</li>
+              </ul>
+            </div>
+
+            <a
+              href="https://www.victoriabarendsenpsychology.co.nz"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-external-link-alt"></i>
+              View Project
+            </a>
+            <a
+              href="https://github.com/WilliamThomsonNZ/VBPsych"
+              target="_blank"
+              rel="noopener"
+              class="link project-link"
+            >
+              <i class="fas fa-code"></i>
+              View Code
+            </a>
+          </div>
         </div>
       </section>
       <section id="about">
@@ -201,9 +389,14 @@
         >
           <i class="fab fa-github"></i>
         </a>
-        <!-- <a href="#" rel="noopener" tabindex="0">
-          <i class="fab fa-linkedin"></i>
-        </a> -->
+        <a
+          href="https://www.linkedin.com/in/william-thomson-31b6681b2/"
+          rel="noopener"
+          tabindex="0"
+          target="_blank"
+        >
+          <i class="fab fa-linkedin-in"></i>
+        </a>
         <a
           href="https://twitter.com/WillThomsonnz"
           rel="noopener"
@@ -214,7 +407,9 @@
         </a>
       </div>
     </footer>
-
+    <div class="introAnimation">
+      <div class="introtext">William Thomson</div>
+    </div>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"
       integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ=="
@@ -229,6 +424,10 @@
       (function () {
         emailjs.init("user_8lhkks9Hk10GylyFDHWmG");
       })();
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
     </script>
   </body>
 </html>
