@@ -339,6 +339,16 @@ nav li {
 .eight {
   order: 7;
 }
+
+.featuredWork {
+  margin-bottom: 15rem;
+}
+
+.disabled-link {
+}
+.disabled-link:hover {
+  cursor: not-allowed;
+}
 .featuredGrid {
   margin-top: 5rem;
   display: grid;
@@ -360,7 +370,7 @@ nav li {
   display: inline-block;
 }
 .phoneGrid {
-  margin-top: 5rem;
+  margin: 5rem 0 10rem 0;
   display: flex;
   justify-content: space-between;
   width: 100%;
